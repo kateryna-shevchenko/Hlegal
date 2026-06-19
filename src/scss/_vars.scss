@@ -1,0 +1,53 @@
+// VARS
+// !vars
+$main-color: #323264;
+$alt-color: #46466e;
+$soft-color: #686887;
+$accent-color: #f0145a;
+$regular-color: #24a3ff;
+$hover-coolor: #0085ff;
+$active-color: #006ccf;
+$bg-color: #f5f5fa;
+$bg-alt-color: #ededf7;
+$text-color: #b3b3ba;
+$basic-white: #ffffff;
+$separator-color: #e6e6f0;
+$gradient: linear-gradient(130deg, #323264, #323264 70%, #a54b5f);
+$gradient-soft: linear-gradient(42deg, #323264 15%, #323264 50%, #7a425e 88%);
+$gradient-red: linear-gradient(325deg, #f0145a 5%, #693264 70%);
+$gradient-supersoft: linear-gradient(
+  230deg,
+  #323264 10%,
+  #323264 60%,
+  #643e72 90%
+);
+$gradient-red-text: linear-gradient(90deg, #f0145a, #ef8080);
+$gradient-red-reversed: linear-gradient(to left, #f0145a 0%, #ef8080 100%);
+
+$radius-sm: 8px;
+$radius-md: 12px;
+$radius-lg: 24px;
+$radius-rounded: 50%;
+
+// !breakpoints
+$breakpoint-md: 768px;
+$breakpoint-lg: 1024px;
+$breakpoint-xl: 1440px;
+$breakpoint-xxl: 1920px;
+
+// MIXINS
+@mixin title($color: $text-color) {
+  font-size: 30px;
+  font-weight: 700;
+  color: $color;
+
+  @media screen and (min-width: $breakpoint-md) {
+    font-size: 38px;
+  }
+}
+
+@mixin text-gradient($gradient: $gradient-red-text) {
+  background: $gradient;
+  background-clip: text;
+  color: transparent;
+}

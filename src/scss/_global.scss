@@ -1,0 +1,67 @@
+@use "vars" as v;
+
+body {
+  font-family: "Montserrat";
+  line-height: 1.2;
+}
+
+a {
+  text-decoration: none;
+}
+
+.wrapper {
+  background: v.$gradient-supersoft;
+}
+
+.wrapper-white {
+  background: v.$basic-white;
+}
+
+.container {
+  padding: 0 30px;
+
+  @media screen and (min-width: v.$breakpoint-md) {
+    // від 768 до бескінечності або до наступного брекпоінту
+    max-width: 708px;
+    margin: 0 auto;
+  }
+
+  @media screen and (min-width: v.$breakpoint-lg) {
+    // від 1024 до бескінечності або до наступного брекпоінту
+    max-width: 964px;
+  }
+
+  @media screen and (min-width: v.$breakpoint-xl) {
+    // від 1440px до бескінечності або до наступного брекпоінту
+    max-width: 1380px;
+  }
+
+  @media screen and (min-width: v.$breakpoint-xxl) {
+    // від 1920px до бескінечності або до наступного брекпоінту
+    max-width: 1660px;
+  }
+}
+
+.hidden {
+  position: absolute;
+  width: 0;
+  height: 0;
+  z-index: -1;
+  opacity: 0;
+}
+
+.dotted {
+  background: v.$separator-color;
+  width: 6px;
+  height: 6px;
+  border-radius: v.$radius-rounded;
+  display: none;
+
+  @media screen and (min-width: v.$breakpoint-md) {
+    display: inline-block;
+  }
+
+  &--dark {
+    background: v.$text-color;
+  }
+}

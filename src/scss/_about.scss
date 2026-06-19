@@ -1,0 +1,226 @@
+@use "vars" as v;
+
+.about-intro {
+  padding: 60px 0;
+
+  @media screen and (max-width: 767px) {
+    padding: 30px 0 60px;
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+
+    @media screen and (min-width: v.$breakpoint-lg) {
+      flex-direction: row;
+      gap: 60px;
+    }
+  }
+
+  &__content {
+    flex: 1;
+  }
+
+  &__title {
+    @include v.text-gradient(v.$gradient-red-text);
+    font-size: 30px;
+    font-weight: 700;
+    margin-bottom: 30px;
+
+    @media screen and (min-width: v.$breakpoint-md) {
+      font-size: 38px;
+    }
+  }
+
+  &__text {
+    font-size: 19px;
+    line-height: 30px;
+    color: #000;
+
+    &:not(:last-child) {
+      margin-bottom: 15px;
+    }
+  }
+
+  &__stats {
+    border-left: 4px solid v.$separator-color;
+    padding-left: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+
+    @media screen and (min-width: v.$breakpoint-lg) {
+      min-width: 365px;
+      flex-shrink: 0;
+      align-self: flex-start;
+    }
+  }
+
+  &__stat-head {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 10px;
+  }
+
+  &__stat-icon {
+    width: 32px;
+    height: 32px;
+  }
+
+  &__stat-number {
+    font-size: 36px;
+    font-weight: 700;
+    @include v.text-gradient(v.$gradient-red-text);
+  }
+
+  &__stat-desc {
+    font-size: 19px;
+    line-height: 30px;
+    color: #000;
+  }
+}
+
+.about-team-banner {
+  background: url("../img/Team.webp") no-repeat center/cover;
+  aspect-ratio: 1920 / 584;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 60px;
+
+  @media screen and (max-width: 767px) {
+    margin-bottom: 30px;
+    aspect-ratio: 360 / 200;
+  }
+
+  &__title {
+    color: rgba(255, 255, 255, 0.8);
+    text-align: center;
+    text-shadow: 0 15px 30px rgba(40, 40, 86, 0.8);
+    text-transform: uppercase;
+    font-size: 36px;
+    letter-spacing: 13px;
+    margin-right: -13px;
+
+    @media screen and (min-width: v.$breakpoint-md) {
+      font-size: 46px;
+      letter-spacing: 30px;
+      margin-right: -30px;
+    }
+
+    @media screen and (min-width: v.$breakpoint-xl) {
+      font-size: 86px;
+      letter-spacing: 63px;
+      margin-right: -63px;
+    }
+  }
+}
+
+.about-quality {
+  padding-bottom: 60px;
+
+  @media screen and (max-width: 767px) {
+    padding-bottom: 30px;
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+
+    @media screen and (min-width: v.$breakpoint-lg) {
+      flex-direction: row;
+      gap: 60px;
+    }
+  }
+
+  &__text {
+    font-size: 19px;
+    line-height: 30px;
+    color: #000;
+    flex: 1;
+
+    p:not(:last-child) {
+      margin-bottom: 15px;
+    }
+  }
+
+  &__heading {
+    @include v.text-gradient(v.$gradient-red-text);
+    font-size: 30px;
+    font-weight: 700;
+
+    @media screen and (min-width: v.$breakpoint-md) {
+      font-size: 38px;
+    }
+
+    @media screen and (min-width: v.$breakpoint-lg) {
+      min-width: 365px;
+    }
+  }
+}
+
+.about-achievements {
+  background: v.$bg-color;
+  padding: 60px 0;
+
+  @media screen and (max-width: 767px) {
+    padding: 30px 0 60px;
+  }
+
+  &__title {
+    font-weight: 700;
+    font-size: 14px;
+    text-transform: uppercase;
+    color: v.$main-color;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+  &__slider {
+    display: flex;
+    gap: 30px;
+    overflow-x: auto;
+    padding: 0 30px 10px;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    margin: 0 -30px;
+
+    @media screen and (min-width: v.$breakpoint-md) {
+      margin: 0;
+      padding: 0 0 10px;
+    }
+
+    &::-webkit-scrollbar {
+      height: 0;
+    }
+  }
+
+  &__card {
+    flex: 0 0 min(280px, calc(100vw - 90px));
+    scroll-snap-align: start;
+    background: v.$basic-white;
+    border-radius: v.$radius-md;
+    padding: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 110px;
+
+    @media screen and (min-width: v.$breakpoint-md) {
+      flex-basis: 310px;
+    }
+
+    img {
+      max-height: 60px;
+      width: auto;
+      object-fit: contain;
+
+      @media screen and (max-width: 1023px) {
+        max-height: 40px;
+      }
+    }
+  }
+}

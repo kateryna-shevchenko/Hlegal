@@ -1,0 +1,102 @@
+@use "vars" as v;
+
+.footer-wrapper {
+  background-color: v.$bg-color;
+  padding: 30px 0;
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  font-size: 14px;
+  text-align: center;
+
+  @media (min-width: v.$breakpoint-lg) {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  &__left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+
+    @media (min-width: v.$breakpoint-lg) {
+      align-items: flex-start;
+    }
+  }
+
+  &__address-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    align-items: center;
+    justify-content: center;
+
+    @media (min-width: v.$breakpoint-lg) {
+      justify-content: flex-start;
+    }
+  }
+
+  &__address {
+    font-size: 16px;
+    color: v.$main-color;
+    font-style: normal;
+  }
+
+  &__maps {
+    text-transform: uppercase;
+    color: v.$regular-color;
+    font-weight: 600;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  &__contact-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    align-items: center;
+    justify-content: center;
+
+    @media (min-width: v.$breakpoint-lg) {
+      justify-content: flex-start;
+    }
+  }
+
+  &__social {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__phone {
+    font-weight: 700;
+    color: v.$main-color;
+    text-decoration: none;
+  }
+
+  &__email {
+    color: v.$regular-color;
+    font-weight: 700;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  &__copyright {
+    color: v.$text-color;
+    font-size: 14px;
+    white-space: nowrap;
+  }
+}

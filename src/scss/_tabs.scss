@@ -1,0 +1,91 @@
+@use "vars" as v;
+
+.tabs {
+  padding: 30px 0;
+  overflow-x: hidden;
+  @media screen and (min-width: v.$breakpoint-md) {
+    padding: 60px 0;
+  }
+  &__container {
+    @media screen and (min-width: v.$breakpoint-lg) {
+      display: flex;
+    }
+  }
+
+  &__list {
+    display: flex;
+    gap: 30px;
+    white-space: nowrap;
+    padding-bottom: 30px;
+    overflow: auto;
+    margin-right: -30px;
+
+    @media screen and (min-width: v.$breakpoint-md) {
+      padding: 0 30px 60px 0;
+      margin-right: calc(-50vw + 324px);
+    }
+
+    @media screen and (min-width: v.$breakpoint-lg) {
+      padding: 0 60px 0 0;
+      margin: 0;
+      flex-flow: column;
+      overflow: visible;
+      border-right: 4px solid v.$text-color;
+      flex: 1 1 50%;
+    }
+    @media screen and (min-width: v.$breakpoint-xl) {
+      flex: 0 1 335px;
+    }
+
+    &::-webkit-scrollbar {
+      width: 0;
+    }
+  }
+
+  &__list-item {
+    cursor: pointer;
+    @include v.title;
+    &.active {
+      @include v.text-gradient;
+    }
+  }
+
+  &__content {
+    padding-top: 30px;
+    border-top: 4px solid v.$text-color;
+
+    @media screen and (min-width: v.$breakpoint-md) {
+      padding: 60px 0 0;
+    }
+
+    @media screen and (min-width: v.$breakpoint-lg) {
+      padding: 0 0 0 60px;
+      border-top: 0;
+      display: flex;
+      align-items: center;
+      flex: 1 1 50%;
+    }
+  }
+
+  &__content-item {
+    display: none;
+
+    &.active {
+      display: block;
+    }
+  }
+
+  &__content-title {
+    font-weight: 700;
+    font-size: 30px;
+    color: v.$basic-white;
+    margin-bottom: 30px;
+  }
+
+  &__content-desc {
+    font-weight: 400;
+    font-size: 19px;
+    color: v.$basic-white;
+    line-height: 30px;
+  }
+}

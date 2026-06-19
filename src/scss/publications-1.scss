@@ -1,0 +1,130 @@
+@use "vars" as v;
+
+.publications-1 {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  padding: 30px;
+  width: 100%;
+  height: auto;
+
+  padding-top: 60px;
+  background: v.$bg-color;
+
+  &-wrapper {
+    display: grid;
+    gap: 30px;
+    grid-template-columns: 1fr;
+    margin: 0 auto;
+    @media screen and (min-width: v.$breakpoint-md) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @media screen and (min-width: v.$breakpoint-lg) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  &__button {
+    text-decoration: none;
+    color: v.$regular-color;
+    font-weight: 700;
+    font-size: 14px;
+    text-transform: uppercase;
+  }
+  &-arrow {
+    width: 12px;
+    height: 12px;
+    position: relative;
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: 4px;
+      left: 3px;
+      width: 8px;
+      height: 8px;
+      border-bottom: 2px solid v.$regular-color;
+      border-right: 2px solid v.$regular-color;
+      transform: rotate(-45deg);
+      cursor: pointer;
+    }
+    @media screen and (min-width: v.$breakpoint-md) {
+      margin-top: 30px;
+    }
+  }
+  &__title {
+    font-weight: 700;
+    font-size: 38px;
+    @include v.text-gradient(v.$gradient-red-text);
+    text-align: left;
+    margin: 10px 0 30px;
+  }
+  &__page {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    background-color: v.$basic-white;
+    border-radius: 8px;
+    overflow: hidden;
+    @media screen and (min-width: v.$breakpoint-md) {
+      &:nth-child(3) {
+        grid-column: 1 / -1;
+      }
+    }
+    @media screen and (min-width: v.$breakpoint-lg) {
+      &:nth-child(3) {
+        grid-column: auto;
+      }
+    }
+    &-img {
+      display: block;
+      object-fit: cover;
+      width: 100%;
+      height: 200px;
+    }
+  }
+}
+
+.caption-1 {
+  display: flex;
+  padding: 30px 30px;
+  flex-direction: column;
+  padding: 20px;
+  &__heading {
+    font-weight: 700;
+    font-size: 16px;
+    color: v.$regular-color;
+    text-decoration: none;
+    width: 100%;
+    &:hover {
+      color: v.$accent-color;
+    }
+  }
+
+  &__date {
+    font-weight: 700;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: v.$text-color;
+    padding: 15px 0;
+    width: 100%;
+  }
+  &__divider {
+    height: 4px;
+    background-color: v.$separator-color;
+    width: 100%;
+  }
+  &__description {
+    font-size: 14px;
+    font-weight: 400;
+    width: 100%;
+    height: auto;
+    min-height: 66px;
+    margin: 15px 0;
+    &-1 {
+      @media screen and (min-width: v.$breakpoint-md) {
+        margin: 15px 0 30px 0;
+      }
+    }
+  }
+}

@@ -1,0 +1,127 @@
+@use "vars" as v;
+
+.services {
+  max-width: 1440px;
+  display: block;
+  margin: 30px auto;
+  padding: 0 20px;
+  overflow: hidden;
+
+  &__button {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 100%;
+    text-transform: uppercase;
+    color: v.$regular-color;
+    margin-top: 30px;
+    cursor: pointer;
+    margin-bottom: 10px;
+    &-arrow {
+      width: 12px;
+      height: 12px;
+      position: relative;
+      &::before {
+        content: "";
+        position: absolute;
+        bottom: 4px;
+        left: 3px;
+        width: 8px;
+        height: 8px;
+        border-bottom: 2px solid v.$regular-color;
+        border-right: 2px solid v.$regular-color;
+        transform: rotate(-45deg);
+        cursor: pointer;
+      }
+      @media screen and (min-width: v.$breakpoint-md) {
+        margin-top: 30px;
+      }
+    }
+  }
+  &__title {
+    font-weight: 700;
+    font-size: 30px;
+    @include v.text-gradient(v.$gradient-red-text);
+    text-align: left;
+  }
+  &__cards {
+    display: grid;
+    gap: 30px;
+    grid-template-columns: repeat(1, 1fr);
+    width: 100%;
+    @media screen and (min-width: v.$breakpoint-md) {
+      grid-template-columns: repeat(2, 1fr);
+      width: 100%;
+    }
+    @media screen and (min-width: v.$breakpoint-lg) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    @media screen and (min-width: v.$breakpoint-xl) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    @media screen and (min-width: v.$breakpoint-xxl) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  &__card {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-flow: column;
+    @media screen and (min-width: v.$breakpoint-md) {
+      width: 294px;
+    }
+    @media screen and (min-width: v.$breakpoint-lg) {
+      width: 261.3px;
+    }
+    @media screen and (min-width: v.$breakpoint-xl) {
+      width: 493.3px;
+    }
+    @media screen and (min-width: v.$breakpoint-xxl) {
+      width: 400px;
+    }
+  }
+  &__icon-container {
+    width: 92px;
+    height: 92px;
+    border-radius: v.$radius-lg;
+    padding: 14px;
+    gap: 10px;
+    background-color: v.$basic-white;
+    margin: 30px 0 30px;
+    svg {
+      width: 64px;
+      height: 64px;
+      object-fit: contain;
+      display: block;
+      margin: 0 auto;
+    }
+  }
+  &__blocks-title {
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 100%;
+    color: v.$regular-color;
+    margin-bottom: 15px;
+    cursor: pointer;
+  }
+  &__blocks-paragraph {
+    font-weight: 400;
+    line-height: 26px;
+    font-size: 16px;
+    color: v.$basic-white;
+    padding-bottom: 15px;
+  }
+
+  &--page {
+    margin: 0 auto 60px;
+    padding: 0 30px 60px;
+
+    @media screen and (min-width: v.$breakpoint-md) {
+      padding-bottom: 60px;
+    }
+
+    .services__title {
+      margin-bottom: 30px;
+    }
+  }
+}

@@ -1,0 +1,240 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>contact page</title>
+  </head>
+
+  <body data-page="contact">
+    <div class="wrapper-white">
+      <div class="head--dark">
+        <!-- HEADER -->
+        <div class="header head-header">
+          <div class="container header__container">
+            <!-- 1 -->
+            <div class="header header__inner header__inner--dark">
+              <ul class="header__lang header__lang--dark">
+                <li class="header__lang-item header__lang-item--dark" data-lang-item="uk">
+                  <a class="header__lang-link header__lang-link--dark" href="#" data-lang="uk">УК</a>
+                </li>
+                <li class="header__lang-item header__lang-item--dark" data-lang-item="pl">
+                  <a class="header__lang-link header__lang-link--dark" href="#" data-lang="pl">PL</a>
+                </li>
+                <li class="header__lang-item header__lang-item--dark" data-lang-item="en">
+                  <a class="header__lang-link header__lang-link--dark" href="#" data-lang="en">EN</a>
+                </li>
+              </ul>
+              <span class="dotted dotted--dark"></span>
+              <address class="header__address header__address--dark" data-i18n="header.address">Kyiv, Mechnikova str, 14/1</address>
+              <span class="dotted dotted--dark"></span>
+              <a
+                class="header__phone header__phone--dark"
+                href="tel:+0800211927"
+                >0800 211 927</a
+              >
+              <span class="dotted dotted--dark"></span>
+              <a
+                class="header__social header__social--dark"
+                href="#"
+                aria-label="Go to Facebook"
+              >
+                <svg>
+                  <use href="/src/img/icons/sprites.svg#facebook"></use>
+                </svg>
+              </a>
+            </div>
+            <!-- 2 -->
+            <div class="header__box header__box--dark">
+              <a class="header__box-logo--dark" href="/index.html">
+                <img
+                  src="/src/img/Logo.svg"
+                  alt="Hlegal"
+                  width="130"
+                  height="60"
+                />
+                <img
+                  src="/src/img/Slash.svg"
+                  alt="Slash"
+                  width="21"
+                  height="47"
+                />
+                <span class="page-name" data-i18n="pages.contact">contact</span>
+              </a>
+              <div class="header__box-burger header__box-burger--dark">
+                <span></span>
+              </div>
+            </div>
+            <!-- 3 -->
+            <nav class="header__nav header__nav--dark">
+              <div class="header__nav-close">X</div>
+              <ul class="header__nav-list header__nav-list--dark">
+                <li class="header__nav-item header__nav-item--dark">
+                  <a
+                    class="header__nav-link header__nav-link--dark"
+                    href="/pages/about-us.html"
+                    data-i18n="nav.about">about us</a
+                  >
+                </li>
+                <li class="header__nav-item header__nav-item--dark">
+                  <a
+                    class="header__nav-link header__nav-link--dark"
+                    href="/pages/services.html"
+                    data-i18n="nav.services">services</a
+                  >
+                </li>
+                <li class="header__nav-item header__nav-item--dark">
+                  <a
+                    class="header__nav-link header__nav-link--dark"
+                    href="/pages/team.html"
+                    data-i18n="nav.team">team</a
+                  >
+                </li>
+                <li class="header__nav-item header__nav-item--dark">
+                  <a
+                    class="header__nav-link header__nav-link--dark"
+                    href="/pages/publications.html"
+                    data-i18n="nav.publications">publications</a
+                  >
+                </li>
+                <li class="header__nav-item header__nav-item--dark">
+                  <a
+                    class="header__nav-link header__nav-link--dark active-nav"
+                    href="/pages/contact-page.html"
+                    data-i18n="nav.contact">contact</a
+                  >
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </div>
+    <main class="contact container">
+      <section class="contact__info">
+        <div class="contact__info-address">
+          <p>Kyiv,</p>
+          <p>Mechnikova str, 14/1</p>
+        </div>
+        <span class="contact__info-separator"></span>
+        <a href="tel:0800211927" class="contact__info-phone">0800 211 927</a>
+
+        <div class="contact__info-email">
+          <a href="mailto:contact@forstudy.space">contact@forstudy.space</a>
+        </div>
+        <span class="contact__info-separator"></span>
+        <div class="contact__info-social">
+          <span class="contact__info-social-text" data-i18n="contact.ourPage">OUR PAGE</span>
+          <a href="#" class="contact__info-social-link">
+            <svg width="38" height="38">
+              <use href="#facebook"></use>
+            </svg>
+            <span data-i18n="contact.onFacebook">ON FACEBOOK</span>
+          </a>
+        </div>
+      </section>
+      <section class="contact__form">
+        <h2 class="contact__form-title" data-i18n="contact.formTitle">We would like to help you</h2>
+        
+          <form class="contact__form-form" action="#" method="post">
+            <div class="contact__form-up">
+              <div class="contact__form-group">
+                <label class="visually-hidden" for="contact-name">Name</label>
+                <input
+                  type="text"
+                  id="contact-name"
+                  name="name"
+                  class="contact__form-input"
+                  placeholder="Name"
+                  data-i18n-placeholder="contact.name"
+                  required
+                />
+              </div>
+              <div class="contact__form-group">
+                <label class="visually-hidden" for="contact-message">Message</label>
+                <textarea
+                  id="contact-message"
+                  name="message"
+                  class="contact__form-input contact__form-input--textarea"
+                  placeholder="Message"
+                  data-i18n-placeholder="contact.message"
+                  required
+                ></textarea>
+              </div>
+            </div>
+        
+            <div class="contact__form-down">
+              <h3 class="contact__form-group--subtitle">how to answer you?</h3>
+        
+              <div class="contact__form-group">
+                <label class="visually-hidden" for="contact-phone">Phone</label>
+                <input
+                  type="tel"
+                  id="contact-phone"
+                  name="phone"
+                  class="contact__form-input"
+                  placeholder="Phone number"
+                  data-i18n-placeholder="contact.phone"
+                />
+              </div>
+        
+              <div class="contact__form-group">
+                <label class="visually-hidden" for="contact-email">Email</label>
+                <input
+                  type="email"
+                  id="contact-email"
+                  name="email"
+                  class="contact__form-input"
+                  placeholder="Email"
+                  data-i18n-placeholder="contact.email"
+                  required
+                />
+              </div>
+            </div>
+        
+            <button type="submit" class="contact__form-button" data-i18n="contact.send">Send message</button>
+          </form>
+        </section>
+
+    </main>
+    <!-- FOOTER -->
+    <div class="footer-wrapper">
+      <footer class="container footer">
+        <div class="footer__left">
+          <div class="footer__address-group">
+            <address class="footer__address" data-i18n="header.address">Kyiv, Mechnikova str, 14/1</address>
+            <span class="dotted dotted--dark"></span>
+            <a class="footer__maps" href="#" data-i18n="footer.onMap">on map</a>
+          </div>
+
+          <div class="footer__contact-group">
+            <a class="footer__social" href="#">
+              <svg width="38" height="38">
+                <use href="/src/img/icons/sprites.svg#facebook-blue"></use>
+              </svg>
+            </a>
+            <span class="dotted dotted--dark"></span>
+            <a class="footer__phone" href="tel:+380800211927">0800 211 927</a>
+            <span class="dotted dotted--dark"></span>
+            <a class="footer__email" href="mailto:contact@forstudy.space">
+              contact@forstudy.space
+            </a>
+          </div>
+        </div>
+
+        <div class="footer__copyright" data-i18n="footer.copyright">© 2021 HLEGAL Law company, LLC</div>
+      </footer>
+    </div>
+
+    <svg xmlns="http://www.w3.org/2000/svg" class="hidden">
+      <symbol viewBox="0 0 38 38" id="facebook">
+        <path
+          d="M38 19.1161C38 8.55857 29.4934 0 19 0C8.50658 0 0 8.55857 0 19.1161C0 28.6575 6.94803 36.5659 16.0312 38V24.6419H11.207V19.1161H16.0312V14.9046C16.0312 10.1136 18.8678 7.46723 23.2078 7.46723C25.2866 7.46723 27.4609 7.84059 27.4609 7.84059V12.545H25.0651C22.7048 12.545 21.9688 14.0185 21.9688 15.5302V19.1161H27.2383L26.3959 24.6419H21.9688V38C31.052 36.5659 38 28.6575 38 19.1161Z"
+        />
+      </symbol>
+    </svg>
+    <script type="module" src="/src/js/main.js"></script>
+  </body>
+</html>
+

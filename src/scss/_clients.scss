@@ -1,0 +1,154 @@
+@use "vars" as v;
+
+.clients {
+  margin: 0 auto;
+  &__title {
+    font-weight: 700;
+    font-size: 14px;
+    text-transform: uppercase;
+    color: v.$main-color;
+    text-align: center;
+    margin: 60px 0 30px 0;
+  }
+  &__logo {
+    display: grid;
+    width: auto;
+    height: auto;
+    margin: 0 auto;
+    @media screen and (min-width: v.$breakpoint-md) {
+      grid-template-columns: repeat(3, 1fr);
+      min-width: 256px;
+    }
+    @media screen and (min-width: v.$breakpoint-lg) {
+      grid-template-columns: repeat(4, 1fr);
+    }
+    @media screen and (min-width: v.$breakpoint-xxl) {
+      margin: 0 100px;
+    }
+    &-Hillel {
+      height: 120px;
+      background-color: #1c4280;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    &-WannaBiz {
+      height: 120px;
+      background-color: #143646;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      @media screen and (min-width: v.$breakpoint-md) {
+      }
+    }
+    &-Tangerine{
+      height: 120px;
+      background-color: #f48b30;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      @media screen and (min-width: v.$breakpoint-md) {
+      }
+    }
+    &-3DLook {
+      height: 120px;
+      background-color: #9e4dc3;
+      width: 100%;
+      display: grid;
+      justify-content: center;
+      align-items: center;
+      @media screen and (min-width: v.$breakpoint-md) {
+      }
+    }
+    &-Orangear{
+      height: 120px;
+      background-color: #f48b30;
+      width: 100%;
+      display: grid;
+      justify-content: center;
+      align-items: center;
+      @media screen and (min-width: v.$breakpoint-md) {
+      }
+    }
+    &-Adtelligent {
+      height: 120px;
+      background-color: #e2e2e4;
+      width: 100%;
+      display: grid;
+      justify-content: center;
+      align-items: center;
+      @media screen and (min-width: v.$breakpoint-md) {
+      }
+    }
+    &-Clikky {
+      display: none;
+      @media screen and (min-width: v.$breakpoint-md) {
+        height: 120px;
+        background-color: #c71c36;
+        width: 100%;
+        display: grid;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+    &-eco-leasing {
+      display: none;
+      @media screen and (min-width: v.$breakpoint-md) {
+        height: 120px;
+        background-color: #dcf3f9;
+        width: 100%;
+        display: grid;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+
+    &-InfraTek {
+      display: none;
+      @media screen and (min-width: v.$breakpoint-md) {
+        height: 120px;
+        background-color: #eaeaea;
+        width: 100%;
+        display: grid;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+    &-cityPark {
+      display: none;
+      @media screen and (min-width: v.$breakpoint-md) {
+        height: 120px;
+        background-color: #282240;
+        width: 100%;
+        display: grid;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+    &-art-printStudio {
+      display: none;
+      @media screen and (min-width: v.$breakpoint-md) {
+        height: 120px;
+        background-color: #1d4568;
+        width: 100%;
+        display: grid;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+    &-ultimateCard {
+      display: none;
+      @media screen and (min-width: v.$breakpoint-md) {
+        height: 120px;
+        background-color: #000000;
+        width: 100%;
+        display: grid;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+  }
+}

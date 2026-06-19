@@ -1,0 +1,364 @@
+@use "vars" as v;
+
+.head {
+  height: 100vh;
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+  padding-bottom: 30px;
+  background: url("../img/symbol.svg") no-repeat center/auto 100%;
+  &--dark {
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+    padding-bottom: 30px;
+  }
+
+  &--gradient {
+    padding-bottom: 0;
+  }
+
+  &__title {
+    font-weight: 700;
+    font-size: 38px;
+    text-align: center;
+    color: v.$basic-white;
+  }
+
+  &__link {
+    display: block;
+    margin: 0 auto;
+    height: 44px;
+    width: 44px;
+    border-radius: v.$radius-rounded;
+    border: 2px solid v.$basic-white;
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 8px;
+      left: 11px;
+      width: 16px;
+      height: 16px;
+      border-bottom: 2px solid v.$basic-white;
+      border-left: 2px solid v.$basic-white;
+      transform: rotate(-45deg);
+    }
+  }
+}
+
+.header {
+  @media screen and (min-width: v.$breakpoint-md) {
+    padding-top: 50px;
+  }
+  &__container {
+    position: relative;
+  }
+
+  &__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: rgba(245, 245, 250, 0.2);
+    padding: 10px 30px;
+    margin: 0 -30px;
+    &--dark {
+      background-color: v.$bg-color;
+      @media screen and (min-width: v.$breakpoint-md) {
+        background: transparent;
+        margin: 0;
+        padding: 0;
+        justify-content: flex-start;
+        gap: 7px;
+      }
+      @media screen and (min-width: v.$breakpoint-lg) {
+        justify-content: flex-end;
+      }
+    }
+    @media screen and (min-width: v.$breakpoint-md) {
+      background: transparent;
+      margin: 0;
+      padding: 0;
+      justify-content: flex-start;
+      gap: 7px;
+    }
+    @media screen and (min-width: v.$breakpoint-lg) {
+      justify-content: flex-end;
+    }
+  }
+
+  &__lang {
+    display: flex;
+  }
+
+  &__lang-item {
+    letter-spacing: 1px;
+    display: block;
+    padding: 5px 7px;
+    font-weight: 700;
+    text-transform: uppercase;
+    border-radius: v.$radius-sm;
+    color: v.$accent-color;
+
+    &--dark {
+      padding: 0;
+    }
+    &.active {
+      background: v.$accent-color;
+      color: v.$basic-white;
+    }
+  }
+
+  &__lang-link {
+    font-size: 12px;
+    color: v.$basic-white;
+    letter-spacing: 1px;
+    display: block;
+    padding: 5px 7px;
+    font-weight: 700;
+    text-transform: uppercase;
+    border-radius: v.$radius-sm;
+
+    &--dark {
+      color: v.$text-color;
+    }
+
+    &.active {
+      background: v.$accent-color;
+      &-lang {
+        color: v.$basic-white;
+      }
+    }
+  }
+
+  &__address {
+    display: none;
+    @media screen and (min-width: v.$breakpoint-md) {
+      display: block;
+      color: v.$text-color;
+    }
+  }
+
+  &__phone {
+    font-weight: 700;
+    color: v.$basic-white;
+    &--dark {
+      color: v.$text-color;
+    }
+  }
+
+  &__social {
+    display: none;
+    &--dark.svg {
+      fill: v.$text-color;
+    }
+    @media screen and (min-width: v.$breakpoint-md) {
+      display: block;
+
+      svg {
+        width: 25px;
+        height: 25px;
+        fill: v.$basic-white;
+      }
+    }
+  }
+
+  &__box {
+    margin: 15px 0 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    @media screen and (min-width: v.$breakpoint-md) {
+      margin: 30px 0 0;
+    }
+    @media screen and (min-width: v.$breakpoint-lg) {
+      position: absolute;
+      top: 50%;
+      left: 30px;
+      margin: 0;
+      transform: translateY(-50%);
+    }
+  }
+
+  &__box-logo {
+    display: flex;
+    align-items: center;
+
+    img {
+      @media screen and (min-width: v.$breakpoint-md) {
+        width: 130px;
+        height: 60px;
+      }
+    }
+
+    &--dark {
+      display: flex;
+      align-items: center;
+    }
+
+    &--light {
+      display: flex;
+      align-items: center;
+
+      .header__slash {
+        filter: brightness(0) invert(1);
+      }
+
+      .page-name {
+        color: v.$basic-white;
+      }
+
+      img:first-child {
+        width: 69px;
+        height: 32px;
+
+        @media screen and (min-width: v.$breakpoint-md) {
+          width: 130px;
+          height: 60px;
+        }
+      }
+    }
+  }
+
+  &__box-burger {
+    width: 32px;
+    height: 32px;
+    position: relative;
+    cursor: pointer;
+
+    &::before,
+    &::after,
+    span {
+      content: "";
+      position: absolute;
+      height: 2px;
+      top: 10px;
+      left: 7px;
+      right: 7px;
+      background: v.$basic-white;
+    }
+
+    &::after {
+      top: auto;
+      bottom: 10px;
+    }
+
+    span {
+      top: 50%;
+      margin-top: -1px;
+    }
+    &--dark {
+      &::before,
+      &::after,
+      span {
+        background: v.$main-color;
+      }
+    }
+
+    @media screen and (min-width: v.$breakpoint-md) {
+      display: none;
+    }
+  }
+
+  &__nav {
+    position: fixed;
+    z-index: 10;
+    bottom: -100%;
+    left: 8px;
+    right: 8px;
+    background: v.$basic-white;
+    padding: 12px;
+    border-top-left-radius: v.$radius-md;
+    border-top-right-radius: v.$radius-md;
+    transition: all 0.2s linear;
+    &--dark {
+      color: v.$regular-color;
+    }
+    &.active {
+      bottom: 0;
+    }
+    @media screen and (min-width: v.$breakpoint-md) {
+      margin: 30px 0 0;
+      position: static;
+      background: transparent;
+      display: block;
+      padding: 0;
+    }
+    @media screen and (min-width: v.$breakpoint-lg) {
+      margin: 16px 0 0;
+    }
+  }
+
+  &__nav-close {
+    color: v.$accent-color;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid v.$accent-color;
+    cursor: pointer;
+    margin-left: auto;
+    @media screen and (min-width: v.$breakpoint-md) {
+      display: none;
+    }
+  }
+
+  &__nav-list {
+    display: flex;
+    flex-flow: column;
+    gap: 15px;
+    margin-top: 20px;
+    @media screen and (min-width: v.$breakpoint-md) {
+      margin-top: 0;
+      flex-flow: row;
+    }
+    &--dark {
+      display: flex;
+      gap: 15px;
+      @media screen and (min-width: v.$breakpoint-md) {
+        margin-top: 0;
+        flex-flow: row;
+      }
+    }
+    @media screen and (min-width: v.$breakpoint-lg) {
+      justify-content: flex-end;
+    }
+  }
+
+  &__nav-link {
+    font-weight: 700;
+    color: v.$active-color;
+    font-size: 24px;
+    display: block;
+    padding: 7px;
+    background: v.$bg-color;
+    text-align: center;
+    border-radius: v.$radius-md;
+    &:hover {
+      background: v.$text-color;
+      @media screen and (min-width: v.$breakpoint-md) {
+        background: transparent;
+        color: v.$accent-color;
+      }
+    }
+    @media screen and (min-width: v.$breakpoint-md) {
+      color: v.$basic-white;
+      font-size: 16px;
+      padding: 0;
+      background: transparent;
+      border-radius: 0;
+    }
+
+    &--dark {
+      padding: 0;
+      background: transparent;
+      color: v.$regular-color;
+      font-weight: 700;
+      @media screen and (min-width: v.$breakpoint-md) {
+        color: v.$regular-color;
+      }
+    }
+  }
+}
