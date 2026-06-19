@@ -14,12 +14,17 @@
 
     @media screen and (min-width: v.$breakpoint-lg) {
       flex-direction: row;
+      align-items: flex-start;
       gap: 60px;
     }
   }
 
   &__content {
-    flex: 1;
+    flex: 1 1 auto;
+
+    @media screen and (min-width: v.$breakpoint-lg) {
+      flex: 1 1 65%;
+    }
   }
 
   &__title {
@@ -44,16 +49,21 @@
   }
 
   &__stats {
-    border-left: 4px solid v.$separator-color;
-    padding-left: 30px;
     display: flex;
     flex-direction: column;
     gap: 40px;
 
     @media screen and (min-width: v.$breakpoint-lg) {
-      min-width: 365px;
-      flex-shrink: 0;
+      flex: 0 1 221px;
+      max-width: 221px;
+      border-left: 4px solid v.$separator-color;
+      padding-left: 30px;
       align-self: flex-start;
+    }
+
+    @media screen and (min-width: v.$breakpoint-xl) {
+      flex: 0 1 250px;
+      max-width: 250px;
     }
   }
 
@@ -132,6 +142,11 @@
 
     @media screen and (min-width: v.$breakpoint-lg) {
       flex-direction: row;
+      align-items: flex-start;
+      gap: 40px;
+    }
+
+    @media screen and (min-width: v.$breakpoint-xl) {
       gap: 60px;
     }
   }
@@ -140,10 +155,14 @@
     font-size: 19px;
     line-height: 30px;
     color: #000;
-    flex: 1;
+    flex: 1 1 auto;
 
     p:not(:last-child) {
       margin-bottom: 15px;
+    }
+
+    @media screen and (min-width: v.$breakpoint-lg) {
+      flex: 1 1 58%;
     }
   }
 
@@ -157,7 +176,13 @@
     }
 
     @media screen and (min-width: v.$breakpoint-lg) {
-      min-width: 365px;
+      flex: 0 1 280px;
+      max-width: 280px;
+    }
+
+    @media screen and (min-width: v.$breakpoint-xl) {
+      flex: 0 1 365px;
+      max-width: 365px;
     }
   }
 }

@@ -12,10 +12,18 @@
     flex-flow: column;
     justify-content: space-between;
     padding-bottom: 30px;
+
+    @media screen and (min-width: v.$breakpoint-md) {
+      padding-bottom: 60px;
+    }
   }
 
   &--gradient {
-    padding-bottom: 0;
+    padding-bottom: 30px;
+
+    @media screen and (min-width: v.$breakpoint-md) {
+      padding-bottom: 60px;
+    }
   }
 
   &__title {
@@ -54,6 +62,14 @@
   }
   &__container {
     position: relative;
+
+    @media screen and (min-width: v.$breakpoint-md) {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      grid-template-rows: auto auto;
+      align-items: center;
+      row-gap: 16px;
+    }
   }
 
   &__inner {
@@ -69,21 +85,16 @@
         background: transparent;
         margin: 0;
         padding: 0;
-        justify-content: flex-start;
         gap: 7px;
-      }
-      @media screen and (min-width: v.$breakpoint-lg) {
-        justify-content: flex-end;
       }
     }
     @media screen and (min-width: v.$breakpoint-md) {
       background: transparent;
       margin: 0;
       padding: 0;
-      justify-content: flex-start;
       gap: 7px;
-    }
-    @media screen and (min-width: v.$breakpoint-lg) {
+      grid-column: 1 / -1;
+      grid-row: 1;
       justify-content: flex-end;
     }
   }
@@ -170,21 +181,22 @@
     align-items: center;
     justify-content: space-between;
     @media screen and (min-width: v.$breakpoint-md) {
-      margin: 30px 0 0;
-    }
-    @media screen and (min-width: v.$breakpoint-lg) {
-      position: absolute;
-      top: 50%;
-      left: 30px;
+      grid-column: 1;
+      grid-row: 2;
       margin: 0;
-      transform: translateY(-50%);
+      justify-self: start;
     }
   }
 
-  &__box-logo {
+  &__box-logo,
+  &__box-logo--dark,
+  &__box-logo--light {
     display: flex;
     align-items: center;
+    gap: 8px;
+  }
 
+  &__box-logo {
     img {
       @media screen and (min-width: v.$breakpoint-md) {
         width: 130px;
@@ -192,15 +204,7 @@
       }
     }
 
-    &--dark {
-      display: flex;
-      align-items: center;
-    }
-
     &--light {
-      display: flex;
-      align-items: center;
-
       .header__slash {
         filter: brightness(0) invert(1);
       }
@@ -218,6 +222,17 @@
           height: 60px;
         }
       }
+    }
+  }
+
+  &__slash {
+    width: auto;
+    height: 28px;
+    flex-shrink: 0;
+    align-self: center;
+
+    @media screen and (min-width: v.$breakpoint-md) {
+      height: 47px;
     }
   }
 
@@ -279,14 +294,14 @@
       bottom: 0;
     }
     @media screen and (min-width: v.$breakpoint-md) {
-      margin: 30px 0 0;
       position: static;
       background: transparent;
       display: block;
       padding: 0;
-    }
-    @media screen and (min-width: v.$breakpoint-lg) {
-      margin: 16px 0 0;
+      grid-column: 2;
+      grid-row: 2;
+      margin: 0;
+      align-self: center;
     }
   }
 

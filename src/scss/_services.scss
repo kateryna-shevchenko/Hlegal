@@ -7,6 +7,15 @@
   padding: 0 20px;
   overflow: hidden;
 
+  &--page {
+    margin-top: 0;
+    padding-top: 30px;
+
+    @media screen and (min-width: v.$breakpoint-md) {
+      padding-top: 60px;
+    }
+  }
+
   &__button {
     font-weight: 700;
     font-size: 14px;
