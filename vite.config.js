@@ -3,10 +3,8 @@ import { defineConfig } from 'vite'
 import glob from 'fast-glob'
 import { fileURLToPath } from 'url'
 import { ViteImageOptimizer } from 'vite-plugin-image-optimizer';
-
-// you can use our path for your project
 const rootPath = '/'
-// example: const rootPath = '/my-path/'
+
 
 export default defineConfig({
 	css: {
