@@ -159,19 +159,25 @@
     }
   }
 
-  &__social {
+  &__socials {
     display: none;
-    &--dark.svg {
-      fill: v.$text-color;
-    }
-    @media screen and (min-width: v.$breakpoint-md) {
-      display: block;
 
-      svg {
-        width: 25px;
-        height: 25px;
-        fill: v.$basic-white;
-      }
+    @media screen and (min-width: v.$breakpoint-md) {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+  }
+
+  &__social {
+    svg {
+      width: 25px;
+      height: 25px;
+      fill: v.$basic-white;
+    }
+
+    &--dark svg {
+      fill: v.$text-color;
     }
   }
 
